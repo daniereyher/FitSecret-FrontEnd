@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApiPost_Requerimientos.MainPage">
+
+
+        <Grid>
+
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Calculemos tus requerimeintos" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Large" FontFamily="Oswald"/>
+            </StackLayout>
+
+            <StackLayout Margin="0, 65, 0, 0">
+                <Frame>
+                    <StackLayout>
+                        <Entry x:Name="txtEstatura" Placeholder="Ingrese su estatura"/>
+                        <Entry x:Name="txtEdad" Placeholder="Ingrese su edad"/>
+                        <Entry x:Name="txtPeso" Placeholder="Ingrese su peso"/>
+                        <Picker x:Name="idSexo" Title="Seleccione su género">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Masculino</x:String>
+                                    <x:String>Femenino</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Picker x:Name="nivelAct" Title="Seleccione su nivel de actividad">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Muy activo</x:String>
+                                    <x:String>Poco activo</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked" HorizontalOptions="Center" CornerRadius="5"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Grid>
+        
+</ContentPage>
